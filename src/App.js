@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
-import PhotoButton from './components/PhotoButton'
+import ImageCheckBox from './components/ImageCheckBox'
 
 
 class App extends React.Component {
@@ -20,7 +20,7 @@ class App extends React.Component {
             <div className="App">
                 <Header />
                 <Main props={this.state} />
-                <PhotoButton action={() => console.log('using PhotoButton')} src={'https://www.gravatar.com/avatar/cb7811690d295df620e222d0abd460ed'} alt='My gravatar'/>
+                <ImageCheckBox src={'https://www.gravatar.com/avatar/cb7811690d295df620e222d0abd460ed'} alt='My gravatar'/>
                 <Footer />
             </div>
         )
