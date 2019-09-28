@@ -5,8 +5,17 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 
 const images = [
-    {id: 'kosher', src: 'https://www.gravatar.com/avatar/cb7811690d295df620e222d0abd460ed', title: 'Kosher'},
-    {id: 'halal', src: 'https://www.gravatar.com/avatar/cb7811690d295df620e222d0abd460ed', title: 'Halal'}
+    {id: 'kosher', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ou_kosher.svg/600px-Ou_kosher.svg.png', title: 'Kosher'},
+		{id: 'vegetarian', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Vegetarian.svg/563px-Vegetarian.svg.png', title: 'Vegetarian'},
+		{id: 'vegan', src: 'https://tse2.mm.bing.net/th?id=OIP.6QOTU-BorVIx5LSN5L_XPAHaGp&pid=Api', title: 'Vegan'},
+    {id: 'halal', src: 'https://tse3.mm.bing.net/th?id=OIP.pEENlv1kxw_4tOjdWhXWXAAAAA&pid=Api', title: 'Halal'},
+		{id: 'cornfree', src: '/cornfree.png', title: 'Cornfree'},
+		{id: 'dairyfree', src: '/dairyfree.png', title: 'Dairyfree'},
+		{id: 'eggfree', src: '/eggfree.png', title: 'Eggfree'},
+		{id: 'glutenfree', src: '/glutenfree.png', title: 'Glutenfree'},
+		{id: 'nutfree', src: '/nutfree.png', title: 'Nutfree'},
+		{id: 'soyfree', src: '/soyfree.png', title: 'Soyfree'},
+		{id: 'sugarfree', src: '/sugarfree.png', title: 'Sugarfree'},
 ]
 class App extends React.Component {
     constructor(props) {
