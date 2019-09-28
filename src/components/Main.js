@@ -1,12 +1,13 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import ImageCheckBox from "./ImageCheckBox";
+import './Main.css'
 
 export default function Main(props) {
     return (
-        <Fragment>
+        <div>
             <p>Hello Gator</p>
-            <h4>Select your lifestyle requirements</h4>
+            <h3 className='Main-component-h4'>Select your lifestyle requirements</h3>
             <ImageCheckBox {...props} />
-        </Fragment>
+        </div>
     )
 }

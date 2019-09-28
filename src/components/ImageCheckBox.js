@@ -27,7 +27,7 @@ class ImageCheckBox extends Component {
 		}
 
     render() {
-        const {images} = this.props
+        const {images, onSubmit} = this.props
         return (
             <React.Fragment>
                 {
@@ -36,7 +36,7 @@ class ImageCheckBox extends Component {
                     ))
                 }
                 <div className="submit-button">
-                    <Button onClick={this.props.onSubmit()} title="Submit" />
+                    <Button onClick={() => onSubmit()} title="Submit" />
                 </div>
             </React.Fragment>
         )

@@ -25,8 +25,20 @@ class App extends React.Component {
 
         this.state = {
             restaurants: [{name:'something', city:'london'}],
-            lifestyle: {kosher:false, halal:false},
-            images: images
+            images: images,
+            lifestyle: {
+                kosher:false,
+                halal:false,
+                vegetarian:false,
+                cornfree:false,
+                vegan:false,
+                dairyfree:false,
+                eggfree:false,
+                glutenfree:false,
+                nutfree:false,
+                soyfree:false,
+                sugarfree:false
+            }
         }
         this.onImageClick = this.onImageClick.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -38,6 +50,7 @@ class App extends React.Component {
 
     // POST request to the server with all lifestyles
     onSubmit() {
+        //axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
         axios.post(server_endpoint, {
             lifestyle: this.state.lifestyle
         }).then(function (response) {
