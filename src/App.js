@@ -3,7 +3,9 @@ import './App.css'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import axios from 'axios'
 
+const server_endpoint = 'https://travel-hackathon.herokuapp.com/api/restaurants'
 const images = [
     {id: 'kosher', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ou_kosher.svg/600px-Ou_kosher.svg.png', title: 'Kosher'},
 		{id: 'vegetarian', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Vegetarian.svg/563px-Vegetarian.svg.png', title: 'Vegetarian'},
@@ -27,10 +29,22 @@ class App extends React.Component {
             images: images
         }
         this.onImageClick = this.onImageClick.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
     }
 
     onImageClick(id) {
         this.setState(prevState => ({lifestyle: {...prevState.lifestyle, [id]: !prevState.lifestyle[id]}}))
+    }
+
+    // POST request to the server with all lifestyles
+    onSubmit() {
+        axios.post(server_endpoint, {
+            lifestyle: this.state.lifestyle
+        }).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error)
+        })
     }
 
     render() {
@@ -41,6 +55,7 @@ class App extends React.Component {
                       lifestyle={this.state.lifestyle}
                       restaurants={this.state.restaurants}
                       onImageClick={this.onImageClick}
+                      onSubmit={this.onSubmit}
                 />
                 <Footer />
             </div>

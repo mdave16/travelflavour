@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import PhotoButton from './PhotoButton'
+import Button from "@kiwicom/orbit-components/lib/Button";
+import './ImageCheckBox.css'
 
 class ImageCheckBox extends Component {
     constructor(props) {
@@ -14,7 +16,6 @@ class ImageCheckBox extends Component {
     }
 
     render() {
-        console.log(this.props)
         const {images} = this.props
         return (
             <React.Fragment>
@@ -23,6 +24,9 @@ class ImageCheckBox extends Component {
                         <PhotoButton id={id} action={() => this.onSelect(id)} src={src} alt={title} />
                     ))
                 }
+                <div className="submit-button">
+                    <Button onClick={this.props.onSubmit()} title="Submit" />
+                </div>
             </React.Fragment>
         )
     }

@@ -4,7 +4,8 @@ import ImageCheckBox from "./ImageCheckBox";
 export default function Main(props) {
     return (
         <Fragment>
-            <p>Hello {props.restaurants[0].name}</p>
+            <p>Hello Gator</p>
+            <h4>Select your lifestyle requirements</h4>
             <ImageCheckBox {...props} />
         </Fragment>
     )
